@@ -1,0 +1,104 @@
+// @import 'vendor/reset';
+@import 'blocks/vars';
+@import 'mixins';
+// @import "./vendor/animate";
+
+
+@import 'fonts';
+@import 'settings';
+
+
+html,body{
+  height: 100%;
+//    background-color: #080808;
+//    color: white;
+   margin: 0;
+   font-family: 'Merriweather', serif;
+   font-weight: 400;
+   font-size: 14px;
+}
+
+.main{
+  height: 100%;
+  flex: 1 0 auto; 
+}
+
+/* Работает в Chrome, Edge и Safari */
+// *::-webkit-scrollbar {
+//     width: 3px;
+//   }
+  
+//   *::-webkit-scrollbar-track {
+//     background: rgba(20, 16, 36, 0.08);
+//     border-radius: 40px;
+//   }
+  
+//   *::-webkit-scrollbar-thumb {
+//     background-color: #141024;
+//     border-radius: 40px;
+//     // border: 3px solid orange;
+//   }
+// =============scrollbar=============
+
+// .merriweather-light {
+//     font-family: "Merriweather", serif;
+//     font-weight: 300;
+//     font-style: normal;
+//   }
+  
+//   .merriweather-regular {
+//     font-family: "Merriweather", serif;
+//     font-weight: 400;
+//     font-style: normal;
+//   }
+  
+//   .merriweather-bold {
+//     font-family: "Merriweather", serif;
+//     font-weight: 700;
+//     font-style: normal;
+//   }
+  
+//   .merriweather-black {
+//     font-family: "Merriweather", serif;
+//     font-weight: 900;
+//     font-style: normal;
+//   }
+  
+//   .merriweather-light-italic {
+//     font-family: "Merriweather", serif;
+//     font-weight: 300;
+//     font-style: italic;
+//   }
+  
+//   .merriweather-regular-italic {
+//     font-family: "Merriweather", serif;
+//     font-weight: 400;
+//     font-style: italic;
+//   }
+  
+//   .merriweather-bold-italic {
+//     font-family: "Merriweather", serif;
+//     font-weight: 700;
+//     font-style: italic;
+//   }
+  
+//   .merriweather-black-italic {
+//     font-family: "Merriweather", serif;
+//     font-weight: 900;
+//     font-style: italic;
+//   }
+  
+
+// ======blocks=========
+
+ @import 'blocks/container';
+ @import 'blocks/page';
+ @import 'blocks/hero';
+// @import 'blocks/header';
+// @import 'blocks/footer';
+
+
+
+
+
+

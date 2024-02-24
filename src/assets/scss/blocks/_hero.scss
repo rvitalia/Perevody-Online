@@ -1,0 +1,179 @@
+.hero {
+    @include bg-cover;
+    height: 100vh;
+
+    & .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // min-width: max-content;
+        // width: 100%;
+        height: 100%;
+    }
+}
+
+.hero__inner {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 80px;
+}
+
+.hero__inner__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hero__inner__title {
+    font-size: 48px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.hero__inner__subtitle {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.hero__inner__item__benefits {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+
+    & li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+
+
+        & span {
+            line-height: 1.4;
+            font-size: 16px;
+        }
+    }
+
+}
+
+.hero__inner__item__calculation {
+    width: 100%;
+    padding: 48px 32px 24px;
+    //margin: 0px -32px;
+    border-radius: 36px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(159, 157, 163, 0.28);
+    box-shadow: rgba(157, 161, 163, 0.24) 0px 0px 12px 2px;
+
+    & form .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+}
+
+.hero__inner__item__calculation__section {
+    width: 100%;
+    border: 1px solid rgba(159, 157, 163, 0.28);
+    border-radius: 6px;
+    position: relative;
+    display: grid;
+    &.--start{
+        grid-template-columns: 60% 40%;
+    }
+    &.--receive{
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto auto;
+    }
+
+    &::before {
+        position: absolute;
+        z-index: 1;
+        top: -12px;
+        left: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(119, 118, 122);
+        background-color: white;
+        padding: 0 5px;
+    }
+
+    & label {
+        height: 100%;
+        border: none;
+        border-radius: 6px;
+        grid-row: 1/3;
+    }
+
+    & input {
+        height: 100%;
+        padding: 0px;
+        width: 100%;
+        font-size: 17px;
+        line-height: 24px;
+        border: none;
+        border-radius: 6px;
+        padding-left: 10px;
+    }
+
+}
+
+.--start.hero__inner__item__calculation__section::before {
+    content: 'Вы отправляете';
+}
+
+.--receive.hero__inner__item__calculation__section::before {
+    content: 'Получатель получит';
+}
+
+.hero__inner____item__calculation__data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & li {
+        display: flex;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.hero__inner____item__calculation__data__line {
+    flex-grow: 1;
+    background-color: rgb(211, 211, 211);
+    height: 1px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: auto;
+}
+
+.hero__inner__item__calculation__button {}
+
+#select_money_receive, #select_money_valuta, #select_money_contry {
+    width: 100% !important;
+
+    & .dd-select {
+        width: 100% !important;
+    }
+
+    & .dd-selected-image {
+        max-width: 35px;
+    }
+
+    & .dd-options.dd-click-off-close{
+        max-height: 346px;
+    }
+}
+#select_money_valuta{
+    grid-column: 2;
+
+    & .dd-select img{
+        display: none;
+    }
+}
