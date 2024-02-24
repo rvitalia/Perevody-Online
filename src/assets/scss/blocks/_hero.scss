@@ -1,6 +1,6 @@
 .hero {
     @include bg-cover;
-    height: 100vh;
+    min-height: 100vh;
 
     & .container {
         display: flex;
@@ -17,6 +17,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 80px;
+    align-items: center;
 }
 
 .hero__inner__item {
@@ -153,7 +154,24 @@
     margin-top: auto;
 }
 
-.hero__inner__item__calculation__button {}
+.hero__inner__item__calculation__button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid grey;
+    max-width: 250px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    transition: all 0.3s linear;
+
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+}
 
 #select_money_receive, #select_money_valuta, #select_money_contry {
     width: 100% !important;
