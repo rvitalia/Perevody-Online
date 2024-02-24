@@ -1,0 +1,41 @@
+.geography {}
+
+.geography__inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.geography__inner__title {
+    font-size: 50px;
+    line-height: 1.5;
+    //color: rgb(20, 20, 20);
+    color: rgb(182, 193, 221);
+}
+
+.geography__inner__subtitle {
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(119, 118, 122);
+    margin-bottom: 50px;
+}
+
+.geography__inner__country {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+
+    & li a {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        font-size: 20px;
+        line-height: 1.4;
+        color: rgb(119, 118, 122);
+        text-transform: capitalize;
+        transition: color 0.3s linear;
+
+        &:hover{
+            color: black;
+        }
+    }
+}
