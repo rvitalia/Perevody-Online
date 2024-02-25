@@ -297,12 +297,12 @@
                         <div class="benefits__inner__item">
                             <h3 class="benefits__inner__item__title h-reset">Подача заявки онлайн</h3>
                             <p class="benefits__inner__item__text h-reset">Мгновенное зачисление на любой указанный счет в любой валюте</p>
-                            <img src="./assets/images/benefits/boosted.png" alt="">
+                            <img src="./assets/images/benefits/boosted.png" alt="" width="98" height="98">
                         </div>
                         <div class="benefits__inner__item">
                             <h3 class="benefits__inner__item__title h-reset">Проверенный сервис</h3>
                             <p class="benefits__inner__item__text h-reset">Отзывы реальных клиентов. </p>
-                            <img src="./assets/images/benefits/reputation.png" alt="">
+                            <img src="./assets/images/benefits/reputation.png" alt="" width="98" height="98">
                         </div>
                     </div>
                 </div>
@@ -310,13 +310,50 @@
             
             <section class="help">
                 <div class="container">
-                    
+                    <h2 class="help__title">Как работать с нами</h2>
+                    <div class="help__inner">
+                        <div class="help__inner__item" style="min-width: 280px;">
+                            <div class="help__inner__item__image help__inner__item__selected" data-selectimage="0">
+                                <img class="" src="./assets/images/help/Online_I_Kazakhstan_1x.webp" width="280" height="500" alt="Online_I_Kazakhstan_1x">
+                            </div>
+                            <div class="help__inner__item__image" data-selectimage="1">
+                                <img class="" src="./assets/images/help/PP_I_TranfserStep1_1x.webp" width="280" height="500" alt="PP_I_TranfserStep1_1x">
+                            </div>
+                            <div class="help__inner__item__image" data-selectimage="2">
+                                <img class="" src="./assets/images/help/PP_I_TranfserStep2_1x.webp" width="280" height="500" alt="PP_I_TranfserStep2_1x">
+                            </div>
+                            <div class="help__inner__item__image" data-selectimage="3">
+                                <img class="" src="./assets/images/help/PP_I_TranfserStep3_1x.webp" width="280" height="500" alt="PP_I_TranfserStep3_1x">
+                            </div>
+                        </div>
+                        <div class="help__inner__item">
+                            <ul class="help__inner__item__list list-reset">
+                                <li data-selected="0" onmouseover="changeImage(event)"><span>01</span>Инструкция по первому действию</li>
+                                <li data-selected="1" onmouseover="changeImage(event)"><span>02</span>Инструкция по второму действию описание по длиннеее</li>
+                                <li data-selected="2" onmouseover="changeImage(event)"><span>03</span>Инструкция по третьему действию описание по длиннеее чем предыдущее</li>
+                                <li data-selected="3" onmouseover="changeImage(event)"><span>04</span>Инструкция по четвертому действию описание по длиннеее чем предыдущее и самое длинное</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
 
     </div>
     <script src="assets/js/app.js" defer></script>
+    <script defer>
+        function changeImage(event){
+            let currentRow = event.target.dataset.selected;
+            let imageBox = document.querySelectorAll('.help__inner__item__image');
+            imageBox.forEach(element => {
+                if(element.classList.contains('help__inner__item__selected')){
+                    element.classList.remove('help__inner__item__selected');
+                }
+            });
+            let currentImage = document.querySelector(`[data-selectimage="${currentRow}"]`);
+            currentImage.classList.add('help__inner__item__selected');
+        }
+    </script>
 </body>
 </html>
 
