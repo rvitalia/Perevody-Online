@@ -1,0 +1,22 @@
+.review {
+    padding: 50px 0;
+}
+.review__title {
+    font-size: 50px;
+    color: rgb(182, 193, 221);
+}
+.review__subtitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-indent: 30px;
+    line-height: 1.4;
+}
+.review__inner {
+    & .slick-arrow::before{
+        color: rgb(182, 193, 221);
+        font-size: 25px;
+    }
+}
+.review__inner__image {
+    padding: 15px;
+}

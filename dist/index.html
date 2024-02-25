@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="assets/css/style.css">
     
     <!-- Useful meta tags -->
@@ -16,10 +19,11 @@
     <title>Денежные переводы</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script></head>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
 
 <body>
     <div class="page">
@@ -314,16 +318,16 @@
                     <div class="help__inner">
                         <div class="help__inner__item" style="min-width: 280px;">
                             <div class="help__inner__item__image help__inner__item__selected" data-selectimage="0">
-                                <img class="" src="./assets/images/help/Online_I_Kazakhstan_1x.webp" width="280" height="500" alt="Online_I_Kazakhstan_1x">
+                                <img class="" src="./assets/images/help/Online_I_Kazakhstan_1x.webp" width="280" height="500" alt="Online_I_Kazakhstan_1x" loading="lazy">
                             </div>
                             <div class="help__inner__item__image" data-selectimage="1">
-                                <img class="" src="./assets/images/help/PP_I_TranfserStep1_1x.webp" width="280" height="500" alt="PP_I_TranfserStep1_1x">
+                                <img class="" src="./assets/images/help/PP_I_TranfserStep1_1x.webp" width="280" height="500" alt="PP_I_TranfserStep1_1x" loading="lazy">
                             </div>
                             <div class="help__inner__item__image" data-selectimage="2">
-                                <img class="" src="./assets/images/help/PP_I_TranfserStep2_1x.webp" width="280" height="500" alt="PP_I_TranfserStep2_1x">
+                                <img class="" src="./assets/images/help/PP_I_TranfserStep2_1x.webp" width="280" height="500" alt="PP_I_TranfserStep2_1x" loading="lazy">
                             </div>
                             <div class="help__inner__item__image" data-selectimage="3">
-                                <img class="" src="./assets/images/help/PP_I_TranfserStep3_1x.webp" width="280" height="500" alt="PP_I_TranfserStep3_1x">
+                                <img class="" src="./assets/images/help/PP_I_TranfserStep3_1x.webp" width="280" height="500" alt="PP_I_TranfserStep3_1x" loading="lazy">
                             </div>
                         </div>
                         <div class="help__inner__item">
@@ -382,6 +386,62 @@
                           Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
                           inceptos himenaeos.
                           </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="partners">
+                <div class="container">
+                    <h2 class="partners__title">Наши партнеры</h2>
+                    <ul class="partners__inner list-reset" id="partners__slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
+                        <li>
+                            <div class="partners__inner__image">
+                                <img src="./assets/images/kisspng-logo-small-business.jpg" width="250" height="250" alt="" loading="lazy">
+                            </div>
+                            <h3>Партнеры</h3>
+                        </li>
+                        <li>
+                            <div class="partners__inner__image">
+                                <img src="./assets/images/company-business.png" width="250" height="250" alt="" loading="lazy">
+                            </div>
+                            <h3>Партнеры название по длиннее</h3>
+                        </li>
+                        <li>
+                            <div class="partners__inner__image">
+                                <img src="./assets/images/kisspng-logo-small-business.jpg" width="250" height="250" alt="" loading="lazy">
+                            </div>
+                            <h3>Партнеры название по длиннее</h3>
+                        </li>
+                        <li>
+                            <div class="partners__inner__image">
+                                <img src="./assets/images/company-business.png" width="250" height="250" alt="" loading="lazy">
+                            </div>
+                            <h3>Партнеры название по длиннее чем предыдущее</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="review">
+                <div class="container">
+                    <h2 class="review__title">Отзывы клиентов</h2>
+                    <h3 class="review__subtitle h-reset">Ниже вы можете ознакомиться с отзывами пользователей, которые успешно воспользовались нашим сервисом</h3>
+                    <div class="review__inner">
+                        <div class="review__inner__image">
+                            <img src="./assets/images/review.jpg" alt="review" loading="lazy">
+                        </div>
+                        <div class="review__inner__image">
+                            <img src="./assets/images/review.jpg" alt="review" loading="lazy">
+                        </div>
+                        <div class="review__inner__image">
+                            <img src="./assets/images/review.jpg" alt="review" loading="lazy">
+                        </div>
+                        <div class="review__inner__image">
+                            <img src="./assets/images/review.jpg" alt="review" loading="lazy">
+                        </div>
+                        <div class="review__inner__image">
+                            <img src="./assets/images/review.jpg" alt="review" loading="lazy">
                         </div>
                     </div>
                 </div>
