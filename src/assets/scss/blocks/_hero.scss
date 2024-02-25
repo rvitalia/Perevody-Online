@@ -47,6 +47,15 @@
     gap: 20px;
     margin-top: 50px;
 
+    @include mobile{
+        gap: 5px;
+    }
+
+    @include small-mobile{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     & li {
         display: flex;
         flex-direction: column;
@@ -77,6 +86,10 @@
         gap: 24px;
         margin-bottom: 40px;
     }
+
+    @include small-mobile{
+        padding: 25px 15px;
+    }
 }
 
 .hero__inner__item__calculation__section {
@@ -92,6 +105,13 @@
         grid-template-columns: 60% 40%;
         grid-template-rows: auto auto;
     }
+    @include small-tablet{
+        grid-template-columns: 45% 55% !important;
+    }
+
+    @include small-mobile{
+        grid-template-columns: 100% !important;
+    }
 
     &::before {
         position: absolute;
@@ -103,6 +123,14 @@
         color: rgb(119, 118, 122);
         background-color: white;
         padding: 0 5px;
+
+        @include mobile{
+            top: -22px;
+            font-size: 12px;
+        }
+        @include small-mobile{
+            top: -12px;
+        }
     }
 
     & label {
@@ -121,16 +149,39 @@
         border: none;
         border-radius: 6px;
         padding-left: 10px;
+
+        @include small-mobile{
+            min-height: 55px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
     }
 
 }
 
 .--start.hero__inner__item__calculation__section::before {
     content: 'Вы отправляете';
+
+    @include mobile{
+        content: 'Вы \A отправляете';
+        white-space: pre; /* Это нужно для корректной обработки символа \A */
+    }
+    @include small-mobile{
+        content: 'Вы отправляете';
+    }
 }
 
 .--receive.hero__inner__item__calculation__section::before {
     content: 'Получатель получит';
+    
+    @include mobile{
+        content: 'Получатель \A получит';
+        white-space: pre; /* Это нужно для корректной обработки символа \A */
+    }
+
+    @include small-mobile{
+        content: 'Получатель получит';
+    }
 }
 
 .hero__inner____item__calculation__data {
@@ -193,10 +244,20 @@
 #select_money_valuta{
     grid-column: 2;
 
+    @include small-mobile{
+        grid-column: unset;
+    }
+
     & .dd-select img{
         display: none;
     }
 }
 .dd-options{
     overflow-y: auto !important;
+}
+
+@include small-mobile{
+    .dd-container{
+        font-size: 12px !important;
+    }
 }

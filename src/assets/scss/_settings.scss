@@ -37,3 +37,17 @@ a {
     display: flex;
     align-items: center;
   }
+
+  .project__title{
+    @include tablet{
+      font-size: 35px !important;
+    }
+  }
+  .section__media{
+    @include tablet{
+      padding: 30px 0 !important;
+    }
+    @include mobile{
+      padding: 15px 0 !important;
+    }
+  }

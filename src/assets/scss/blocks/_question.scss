@@ -8,17 +8,34 @@
 .question__inner {
 
     & h3{
-        font-size: 32px;
+        font-size: 32px !important;
         color: rgb(47, 52, 65);
         cursor: pointer;
         padding: 30px 0 0;
         background: transparent;
         border: 1px solid rgb(182, 193, 221);
+        border-right: none;
+        border-left: none;
+        transition: all 0.3s linear;
+
+        @include mobile{
+            font-size: 25px !important;
+        }
 
         &:not(:first-child){
             margin-top: 20px;
         }
+
+        & + div{
+            border-right: none;
+            border-left: none;
+        }
     }
+
+    & .ui-accordion-header-active{
+        background-color: rgb(182, 193, 221);
+    }
+
     & p{
         font-size: 18px;
     }

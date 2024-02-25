@@ -12,9 +12,35 @@
     grid-template-columns: 25% auto;
     column-gap: 20px;
     align-items: center ;
+
+    @include mobile{
+        grid-template-columns: 100%;
+    }
 }
 
-.help__inner__item {}
+.help__inner__item-mobile{
+    display: none;
+
+    @include mobile{
+        display: block;
+    }
+
+    & img{
+        margin: 0 auto;
+        max-height: 400px;
+    }
+    & p{
+        padding: 0px 15px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.help__inner__item {
+    @include mobile{
+        display: none;
+    }
+}
 
 .help__inner__item__image {
     display: none;
@@ -40,6 +66,19 @@
         
         display: flex;
         align-items: center;
+
+        @include for-desktop{
+            font-size: 25px;
+        }
+
+        @include tablet{
+            font-size: 20px;
+            padding: 12px;
+        }
+        @include small-tablet{
+            font-size: 18px;
+            padding: 10px 0;
+        }
         
         &:hover{
             background: #e7e7f0;
@@ -48,6 +87,17 @@
         & span{
             margin-right: 20px;
             font-size: 50px;
+
+            @include for-desktop{
+                font-size: 40px;
+            }
+
+            @include tablet{
+                font-size: 30px;
+            }
+            @include small-tablet{
+                font-size: 25px;
+            }
         }
     }
 }
