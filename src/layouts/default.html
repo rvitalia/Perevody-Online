@@ -19,7 +19,9 @@
     <script defer>
         function changeImage(event){
             let currentRow = event.target.dataset.selected;
+            let changeRows = document.querySelectorAll('[data-selected]');
             let imageBox = document.querySelectorAll('.help__inner__item__image');
+            let rowCondition = document.querySelectorAll('[data-condition]');
             imageBox.forEach(element => {
                 if(element.classList.contains('help__inner__item__selected')){
                     element.classList.remove('help__inner__item__selected');
@@ -28,6 +30,18 @@
             let currentImage = document.querySelector(`[data-selectimage="${currentRow}"]`);
             if(currentImage){
                 currentImage.classList.add('help__inner__item__selected');
+            }
+            if(rowCondition.length > 0){
+                rowCondition.forEach((element, index) => {
+                    element.classList.remove('active');
+                    changeRows[index].classList.remove('active');
+                });
+                rowCondition.forEach((element,index) => {
+                    if(index <= currentRow){
+                        element.classList.add('active');
+                    }
+                });
+                changeRows[currentRow].classList.add('active');
             }
         }
     </script>

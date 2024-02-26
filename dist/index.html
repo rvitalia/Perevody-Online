@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -39,15 +38,15 @@
                             <h3 class="hero__inner__subtitle h-reset">Переводите деньги онлайн в более чем 60 стран мира</h3>
                             <ul class="hero__inner__item__benefits list-reset">
                                 <li class="hero__inner__item__benefits">
-                                    <img src="./assets/images/efficiency.svg" alt="efficiency" width="48" height="48">
+                                    <img src="./assets/images/hero/1.svg" alt="efficiency" width="48" height="48">
                                     <span>Быстро и легко</span>
                                 </li>
                                 <li class="hero__inner__item__benefits">
-                                    <img src="./assets/images/satisfaction.svg" alt="satisfaction" width="48" height="48">
+                                    <img src="./assets/images/hero/2.svg" alt="satisfaction" width="48" height="48">
                                     <span>Более 7 млн клиентов</span>
                                 </li>
                                 <li class="hero__inner__item__benefits">
-                                    <img src="./assets/images/support.svg" alt="support" width="48" height="48">
+                                    <img src="./assets/images/hero/3.svg" alt="support" width="48" height="48">
                                     <span>Круглосуточная поддержка пользователей</span>
                                 </li>
                             </ul>
@@ -329,6 +328,12 @@
                             <div class="help__inner__item__image" data-selectimage="3">
                                 <img class="" src="./assets/images/help/PP_I_TranfserStep3_1x.webp" width="280" height="500" alt="PP_I_TranfserStep3_1x" loading="lazy">
                             </div>
+                            <div class="help__inner__item__condition">
+                                <div class="active" data-condition="0"></div>
+                                <div data-condition="1"></div>
+                                <div data-condition="2"></div>
+                                <div data-condition="3"></div>
+                            </div>
                         </div>
                         <div class="help__inner__item">
                             <ul class="help__inner__item__list list-reset">
@@ -409,6 +414,17 @@
                 </div>
             </section>
             
+            <section class="transfer">
+                <div class="container">
+                    <div class="transfer__inner">
+                        <h2 class="transfer__inner__title h-reset project__title">Переводы в Страну</h2>
+                        <p class="transfer__inner__text">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Алфавит образ которое щеке все которой предупреждал несколько одна буквоград себя большой парадигматическая рукопись, дал скатился, за пустился однажды до.</p>
+                        <img class="transfer__inner__img" src="./assets/images/transfer/1.svg" alt="">
+                        <a href="t.me" class="transfer__inner__link" target="_blank">Перевести онлайн</a>
+                    </div>
+                </div>
+            </section>
+            
             <section class="partners section__media">
                 <div class="container">
                     <h2 class="partners__title project__title">Наши партнеры</h2>
@@ -471,7 +487,9 @@
     <script defer>
         function changeImage(event){
             let currentRow = event.target.dataset.selected;
+            let changeRows = document.querySelectorAll('[data-selected]');
             let imageBox = document.querySelectorAll('.help__inner__item__image');
+            let rowCondition = document.querySelectorAll('[data-condition]');
             imageBox.forEach(element => {
                 if(element.classList.contains('help__inner__item__selected')){
                     element.classList.remove('help__inner__item__selected');
@@ -480,6 +498,18 @@
             let currentImage = document.querySelector(`[data-selectimage="${currentRow}"]`);
             if(currentImage){
                 currentImage.classList.add('help__inner__item__selected');
+            }
+            if(rowCondition.length > 0){
+                rowCondition.forEach((element, index) => {
+                    element.classList.remove('active');
+                    changeRows[index].classList.remove('active');
+                });
+                rowCondition.forEach((element,index) => {
+                    if(index <= currentRow){
+                        element.classList.add('active');
+                    }
+                });
+                changeRows[currentRow].classList.add('active');
             }
         }
     </script>

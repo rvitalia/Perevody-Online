@@ -84,6 +84,10 @@
             background: #e7e7f0;
         }
 
+        &.active{
+            background: #e7e7f0;
+        }
+
         & span{
             margin-right: 20px;
             font-size: 50px;
@@ -100,4 +104,21 @@
             }
         }
     }
+}
+.help__inner__item__condition{
+    width: 100%;
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 8px;
+
+    & div{
+        background-color: rgb(212, 215, 223);
+        height: 4px;
+        border-radius: 50px;
+
+        &.active{
+            background-color: rgb(118, 51, 255);
+        }
+    }
+
 }
